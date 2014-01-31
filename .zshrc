@@ -59,7 +59,7 @@ function tvim(){ tmux -u -2 new-session "TERM=screen-256color reattach-to-user-n
 gcmake() { CC=gcc-4.7 CXX=g++-4.7 cmake "$@" }
 alias unzip-all="find . -name '*.zip' -exec unzip {} \;"
 alias cdlink="cd `readlink $(pwd)`"
-dotfiles() { "Projects/Github/villadelfia/dotfiles/dotfiles.sh" "$@" }
+dotfiles() { ~/Projects/Github/villadelfia/dotfiles/dotfiles.sh "$@" }
 
 # Path.
 QTPATH=$HOME/Developer/Qt5/5.2.0/clang_64/bin
