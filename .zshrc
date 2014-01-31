@@ -72,7 +72,7 @@ PYPATH=/Users/villadelfia/Library/Python/2.7/bin
 export PATH=$QTPATH:$UNIXPATH:$SERVERPATH:$OTHERPATH:$APPPATH:$PYPATH
 
 # Fix editor.
-export EDITOR=/usr/local/bin/mviml
+export EDITOR='subl -w'
 
 # Colored ls command
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
