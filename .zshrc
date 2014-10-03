@@ -61,29 +61,6 @@ alias unzip-all="find . -name '*.zip' -exec unzip {} \;"
 alias cdlink="cd `readlink $(pwd)`"
 dotfiles() { ~/Projects/Github/villadelfia/dotfiles/dotfiles.sh "$@" }
 
-# Path.
-QTPATH=$HOME/Developer/Qt5/5.2.0/clang_64/bin
-UNIXPATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
-SERVERPATH=/Applications/Server.app/Contents/ServerRoot/usr/bin:/Applications/Server.app/Contents/ServerRoot/usr/sbin
-OTHERPATH=/opt/X11/bin:/usr/texbin
-APPPATH=/Applications/DrRacket.app/Contents/MacOS/bin:/Applications/love.app/Contents/MacOS:/Library/Frameworks/Mono.framework/Versions/Current/bin
-PYPATH=/Users/villadelfia/Library/Python/2.7/bin
-
-export PATH=$QTPATH:$UNIXPATH:$SERVERPATH:$OTHERPATH:$APPPATH:$PYPATH
-
-# Fix editor.
-export EDITOR='subl -w'
-
-# Colored ls command
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export CLICOLOR=1
-
-# gnuplot
-export GNUTERM=x11
-
-# no homebrew beer
-export HOMEBREW_NO_EMOJI=1
-
 # Case insensitive files system -> case insensitive commands.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -99,11 +76,3 @@ source ~/perl5/perlbrew/etc/bashrc
 
 # rvm, modifies path.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Python path
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
-# Edit some fun cmake stuff to make it work with qt5.
-export CMAKE_PREFIX_PATH=$HOME/Developer/Qt5/5.2.0/clang_64
-
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig
